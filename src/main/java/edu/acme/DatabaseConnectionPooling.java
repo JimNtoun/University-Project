@@ -30,26 +30,26 @@ public class DatabaseConnectionPooling {
                 logger.debug("No arguments passed.");
             }
 
-            var demo = new DatabaseConnectionPooling();
+            var dss = new DatabaseConnectionPooling();
 
-            demo.loadSqlCommands();
-            demo.loadDatabaseDriver();
+            dss.loadSqlCommands();
+            dss.loadDatabaseDriver();
 
             // Initializing Connection Pooling mechanism
-            demo.initializeHikariConnectionPooling();
+            dss.initializeHikariConnectionPooling();
 
-            demo.dropTable();
+            dss.dropTable();
 
-            demo.createTable();
-            demo.insertData();
-            demo.insertGeneratedData(20);
-            demo.readData();
+            dss.createTable();
+            dss.insertData();
+            dss.insertGeneratedData(20);
+            dss.readData();
 
-            demo.updateData();
-            demo.readData();
+            dss.updateData();
+            dss.readData();
 
-            demo.deleteData();
-            demo.readData();
+            dss.deleteData();
+            dss.readData();
         }
 
     private void loadSqlCommands() {
