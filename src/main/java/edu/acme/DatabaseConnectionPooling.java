@@ -224,7 +224,7 @@ public class DatabaseConnectionPooling {
 
     private int findMaximumIdValue() {
         try (Connection connection = getConnection(); Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery(sqlCommands.getProperty("select.table.002"))) {
+             ResultSet resultSet = statement.executeQuery(sqlCommands.getProperty(""))) {
 
             if (resultSet.isBeforeFirst()) {
                 resultSet.next();
