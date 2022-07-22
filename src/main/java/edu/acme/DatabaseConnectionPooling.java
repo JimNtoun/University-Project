@@ -165,16 +165,13 @@ public class DatabaseConnectionPooling {
             preparedStatement.setInt(1, maximumIdValue + i);
             preparedStatement.setString(2, generator.getFirstName());
             preparedStatement.setString(3, generator.getLastName());
-            preparedStatement.setInt(4, ThreadLocalRandom.current().nextInt(18, 70));
-
             // Add command to batch
             preparedStatement.addBatch();
         }
     }
     private void updateData() {
         try (Connection connection = getConnection(); Statement statement = connection.createStatement()) {
-            logger.info("Update command was successful with {} row(s) affected.",
-                    statement.executeUpdate(sqlCommands.getProperty("update.table.001")));
+            logger.info("Update command was successful with {} row(s) affected.");
         } catch (SQLException ex) {
             logger.error("Error while updating data.", ex);
         }
@@ -182,8 +179,7 @@ public class DatabaseConnectionPooling {
 
     private void deleteData() {
         try (Connection connection = getConnection(); Statement statement = connection.createStatement()) {
-            logger.info("Delete command was successful with {} row(s) affected.",
-                    statement.executeUpdate(sqlCommands.getProperty("delete.table.001")));
+            logger.info("Delete command was successful with {} row(s) affected.");
         } catch (SQLException ex) {
             logger.error("Error while deleting data.", ex);
         }
