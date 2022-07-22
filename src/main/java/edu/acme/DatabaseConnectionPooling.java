@@ -127,6 +127,16 @@ public class DatabaseConnectionPooling {
             statement.addBatch(sqlCommands.getProperty("insert.table.023"));
             statement.addBatch(sqlCommands.getProperty("insert.table.024"));
             statement.addBatch(sqlCommands.getProperty("insert.table.025"));
+            statement.addBatch(sqlCommands.getProperty("insert.table.026"));
+            statement.addBatch(sqlCommands.getProperty("insert.table.027"));
+            statement.addBatch(sqlCommands.getProperty("insert.table.028"));
+            statement.addBatch(sqlCommands.getProperty("insert.table.029"));
+            statement.addBatch(sqlCommands.getProperty("insert.table.030"));
+            statement.addBatch(sqlCommands.getProperty("insert.table.031"));
+            statement.addBatch(sqlCommands.getProperty("insert.table.032"));
+            statement.addBatch(sqlCommands.getProperty("insert.table.033"));
+            statement.addBatch(sqlCommands.getProperty("insert.table.034"));
+            statement.addBatch(sqlCommands.getProperty("insert.table.035"));
 
 
             int[] rowsAffectedArray = statement.executeBatch();
