@@ -1,5 +1,7 @@
 package edu.acme.model;
 
+import jdk.jshell.Snippet;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -7,23 +9,27 @@ import java.util.List;
 public class Student extends Basemodel{
     private String name;
     private String address;
-    private Date dateOfBirth;
+    private String phone;
     private List<Enrollment> enrollmentList;
 
 
-    public Student(String name, String address, Date dateOfBirth, List<Enrollment> enrollmentList) {
+    public Student(String name, String address, String phone, List<Enrollment> enrollmentList) {
         this.name = name;
         this.address = address;
-        this.dateOfBirth = dateOfBirth;
+        this.phone = phone;
         this.enrollmentList = enrollmentList;
     }
 
-    public Student(Long id, String name, String address, Date dateOfBirth, List<Enrollment> enrollmentList) {
+    public Student(Long id, String name, String address, String phone, List<Enrollment> enrollmentList) {
         super(id);
         this.name = name;
         this.address = address;
-        this.dateOfBirth = dateOfBirth;
+        this.phone = phone;
         this.enrollmentList = enrollmentList;
+    }
+
+    public Student() {
+
     }
 
     public String getName() {
@@ -42,12 +48,12 @@ public class Student extends Basemodel{
         this.address = address;
     }
 
-    public Date getDateOfBirth() {
-        return dateOfBirth;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public List<Enrollment> getEnrollmentList() {
@@ -63,7 +69,7 @@ public class Student extends Basemodel{
         return "Student{" +
                 "name='" + name + '\'' +
                 ", address='" + address + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
+                ", phone=" + phone +
                 ", enrollmentList=" + enrollmentList +
                 '}';
     }

@@ -17,6 +17,10 @@ public class Department extends Basemodel{
         this.units = units;
     }
 
+    public Department() {
+
+    }
+
     public String getName() {
         return name;
     }
